@@ -1,0 +1,133 @@
+/* База стиль */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер */
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Поля ввода и кнопка */
+input, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Кнопки сортировки */
+button#sort-asc, button#sort-desc {
+    margin: 10px 0; /* Отступы между кнопками сортировки */
+}
+
+/* Список задач */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Элемент задачи */
+li {
+    display: flex;
+    flex-direction: column; /* Кнопки будут внизу задачи */
+    justify-content: space-between;
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px; /* Пространство между элементами */
+    min-height: 100px; /* Минимальная высота задачи */
+}
+
+/* Стиль кнопок в задачах */
+li button {
+    width: 30%; /* Каждая кнопка будет занимать 30% от ширины задачи */
+    padding: 8px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin-top: 5px; /* Отступ между кнопками */
+    cursor: pointer;
+    text-align: center;
+}
+
+li button:not(:last-child) {
+    margin-right: 5px; /* Отступ между кнопками */
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Цвета кнопок задач */
+button.edit-btn {
+    background-color: #ffc107; /* Желтый */
+}
+
+button.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+button.delete-btn {
+    background-color: #dc3545; /* Красный */
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+button.complete-btn {
+    background-color: #28a745; /* Зеленый */
+}
+
+button.complete-btn:hover {
+    background-color: #218838;
+}
+
+/* Цвет для задач с просроченным дедлайном */
+li.due {
+    background-color: #f8d7da;
+    color: #721c24;
+}
